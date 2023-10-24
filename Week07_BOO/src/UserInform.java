@@ -22,7 +22,7 @@ public class UserInform {
 			email = s.next();
 			System.out.println("입력이 끝났으면 1, 계속하려면 0: ");
 			num2 = s.nextInt();
-			in.print(num + "," + name + "," + tel + "," + email+"");
+			in.print(num + "," + name + "," + tel + "," + email+" ");
 			in.flush();
 			if(num2 == 1)
 				break;
