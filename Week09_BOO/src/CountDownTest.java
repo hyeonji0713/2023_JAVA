@@ -5,22 +5,19 @@ import javax.swing.JLabel;
 
 public class CountDownTest extends JFrame {
     private JLabel label;
-    private Thread t;
-    private int currentCount; // 현재 카운트 값
-    private boolean isCounting; // 카운트 중인지 여부
+    
+    Thread t;
 
     class Counter extends Thread {
         public void run() {
-            for (int i = currentCount; i <= 100; i++) {
-                if (!isCounting) {
-                    return;
-                }
+            for (int i = 0; i <= 100; i++) {
+            
                 try {
                     Thread.sleep(1000);
-                    label.setText(i + "");
                 } catch (InterruptedException e) {
                     return;
                 }
+                label.setText(i + "");
             }
         }
     }
@@ -38,7 +35,6 @@ public class CountDownTest extends JFrame {
         JButton b1 = new JButton("카운트 중지");
         b1.setBounds(247, 25, 125, 23);
         b1.addActionListener(e -> {
-            isCounting = false;
             t.interrupt();
         });
         getContentPane().add(b1);
@@ -46,8 +42,6 @@ public class CountDownTest extends JFrame {
         JButton b2 = new JButton("카운트 다시 시작");
         b2.setBounds(247, 50, 125, 23);
         b2.addActionListener(e -> {
-            isCounting = true;
-            currentCount = Integer.parseInt(label.getText());
             t = new Counter();
             t.start();
         });
@@ -55,7 +49,6 @@ public class CountDownTest extends JFrame {
 
         setVisible(true);
         t = new Counter();
-        isCounting = true;
         t.start();
     }
 
