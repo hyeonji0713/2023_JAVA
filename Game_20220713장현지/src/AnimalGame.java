@@ -12,10 +12,10 @@ public class AnimalGame extends JFrame {
 
         // 동물 달리기 스레드 생성자
         public MyThread(String animalName, int x, int y, int[] raceResults) {
-            this.animalName = animalName; // 동물 이름 초기화
+            this.animalName = animalName; 
             this.x = x;
             this.y = y;
-            this.raceResults = raceResults; // 결과 배열 초기화
+            this.raceResults = raceResults; 
             ImageIcon icon = new ImageIcon(animalName + ".jpg"); // 동물 이름으로 이미지 파일 가져옴
             Image image = icon.getImage();
             Image newImage = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
