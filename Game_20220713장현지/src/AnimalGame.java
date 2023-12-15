@@ -55,7 +55,7 @@ public class AnimalGame extends JFrame {
                     if (resultPanel.allAnimalsFinished()) {
                         String winner = resultPanel.getWinner();
                         System.out.println("\n"+"축하합니다! 우승자는 " + winner + " 입니다!");
-                        System.out.println("**우승자에게는 상품으로 '1년치 식량을 드립니다!**");
+                        System.out.println("**우승자에게는 상품으로 '1년치 식량'을 드립니다!**");
                     }
                     break;
                 }
