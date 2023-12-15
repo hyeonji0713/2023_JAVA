@@ -58,7 +58,7 @@ public class AnimalGame extends JFrame {
     // AnimalGame 클래스 생성자
     public AnimalGame() {
         setTitle("동물 달리기 대회");
-        setSize(800, 600); // 가로 길이를 800으로 변경
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
 
