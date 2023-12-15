@@ -51,18 +51,16 @@ public class AnimalGame extends JFrame {
                     System.out.println(rank + "등: " + animalName);
                     resultPanel.addResult(animalName, rank);
 
-                    // 추가된 부분: 모든 동물이 결승선을 통과하면 최종 우승자 출력
+                    // 모든 동물이 결승선을 통과하면 최종 우승자 출력
                     if (resultPanel.allAnimalsFinished()) {
                         String winner = resultPanel.getWinner();
                         System.out.println("축하합니다! 우승자는 " + winner + " 입니다!");
                         System.out.println("**우승자에게는 상품으로 '1년치 식량을 드립니다!**");
                     }
-
-                    SwingUtilities.invokeLater(() -> label.setVisible(false)); // 경주가 끝난 동물은 화면에서 숨김
                     break;
                 }
                 try {
-                    Thread.sleep(200); // 일정 시간 동안 대기
+                    Thread.sleep(200); // 0.2초마다 동물 이동하도록 대기 시간 지정
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -97,7 +95,7 @@ public class AnimalGame extends JFrame {
 
         // 최종 우승자를 결정하는 메서드
         public String getWinner() {
-            // 최종 우승자를 결정하는 로직 추가 (여기서는 간단히 1등으로 도착한 동물 이름을 리턴)
+            // 1등으로 도착한 동물 이름을 반환
             for (int i = 0; i < raceResults.length; i++) {
                 if (raceResults[i] == 1) {
                     return animalNames[i];
