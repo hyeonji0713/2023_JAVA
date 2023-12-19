@@ -6,7 +6,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDBC1">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDBC_DRIVER00">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDBC_DRIVER_0">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
